@@ -49,7 +49,7 @@
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04);
 
   --container-max: 1200px;
-  --navbar-height: 64px;
+  --navbar-height: 68px;
 }
 
 [data-theme='dark'] {
@@ -93,10 +93,16 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
