@@ -1,0 +1,110 @@
+%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 612 792]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 5 0 R
+      /F2 6 0 R
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<<
+  /Length 765
+>>
+stream
+BT
+/F2 24 Tf
+50 720 Td
+(DEVELOPER RESUME) Tj
+/F1 12 Tf
+0 -30 Td
+(B.E. Undergraduate | Computer Science & Aspiring Developer) Tj
+0 -20 Td
+(Email: nitinydv898989@gmail.com | Portfolio: https://github.com) Tj
+0 -30 Td
+(-----------------------------------------------------------------------------------) Tj
+/F2 14 Tf
+0 -25 Td
+(EDUCATION) Tj
+/F1 11 Tf
+0 -20 Td
+(Bachelor of Engineering (B.E.) in Computer Science & Engineering [Pursuing]) Tj
+0 -18 Td
+(Core: Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks) Tj
+0 -30 Td
+(-----------------------------------------------------------------------------------) Tj
+/F2 14 Tf
+0 -25 Td
+(TECHNICAL SKILLS) Tj
+/F1 11 Tf
+0 -20 Td
+(Languages: Java, JavaScript (ES6+), C, Python) Tj
+0 -18 Td
+(Frontend: HTML5, CSS3, React.js, Responsive UI/UX) Tj
+0 -18 Td
+(Backend & Database: Spring Boot, REST APIs, MySQL, MongoDB) Tj
+0 -18 Td
+(Developer Tools: Git, GitHub, VS Code, Postman) Tj
+0 -30 Td
+(-----------------------------------------------------------------------------------) Tj
+/F2 14 Tf
+0 -25 Td
+(PROJECTS & PROBLEM SOLVING) Tj
+/F1 11 Tf
+0 -20 Td
+(Active problem solver on LeetCode) Tj
+0 -18 Td
+(Engineered clean, responsive React web apps adhering to modern standards.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Bold
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000266 00000 n 
+0000001083 00000 n 
+0000001150 00000 n 
+trailer
+<<
+  /Size 7
+  /Root 1 0 R
+>>
+startxref
+1222
+%%EOF
