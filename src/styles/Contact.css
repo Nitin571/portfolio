@@ -5,6 +5,9 @@
 .contact-section {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Status Pill in Header */
@@ -21,6 +24,13 @@
   font-weight: 600;
   color: var(--text-primary);
   width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.status-pill-text {
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .contact-status-pill .pulse-dot {
@@ -30,6 +40,7 @@
   background-color: var(--success-color);
   box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
   animation: pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.2, 1);
+  flex-shrink: 0;
 }
 
 @keyframes pulse-ring {
@@ -47,16 +58,25 @@
 /* Contact Grid */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
+  width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 960px) {
   .contact-grid {
-    grid-template-columns: 380px 1fr;
+    grid-template-columns: 380px minmax(0, 1fr);
     gap: 40px;
   }
+}
+
+.contact-info-column,
+.contact-form-column {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Left Column: Info Card */
@@ -69,12 +89,17 @@
   flex-direction: column;
   gap: 22px;
   box-shadow: var(--shadow-subtle);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .info-card-header {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .info-card-title {
@@ -96,6 +121,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
+  width: 100%;
 }
 
 .channel-label {
@@ -116,6 +143,9 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   transition: border-color var(--transition-fast);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .email-copy-box:hover {
@@ -127,6 +157,7 @@
   align-items: center;
   gap: 10px;
   min-width: 0;
+  flex: 1 1 auto;
 }
 
 .email-icon {
@@ -141,6 +172,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .copy-btn {
@@ -176,19 +208,24 @@
   padding: 14px 0;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  min-width: 0;
 }
 
 .contact-meta-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-size: 0.825rem;
   color: var(--text-secondary);
+  line-height: 1.5;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .meta-icon {
   color: var(--text-muted);
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 /* Social Channel Pills */
@@ -196,17 +233,20 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 0;
+  width: 100%;
 }
 
 .contact-social-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  width: 100%;
 }
 
 .social-pill-btn {
   flex: 1 1 calc(33.333% - 8px);
-  min-width: 95px;
+  min-width: 90px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -220,6 +260,7 @@
   border-radius: var(--radius-xs);
   transition: all var(--transition-fast);
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .social-pill-btn:hover {
@@ -231,6 +272,7 @@
 .social-pill-arrow {
   color: var(--text-muted);
   transition: transform var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .social-pill-btn:hover .social-pill-arrow {
@@ -245,6 +287,10 @@
   border-radius: var(--radius-sm);
   padding: 32px;
   box-shadow: var(--shadow-subtle);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .form-card-header {
@@ -269,17 +315,20 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
+  min-width: 0;
 }
 
 .form-grid-row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
   .form-grid-row {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -287,6 +336,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
+  min-width: 0;
 }
 
 .form-label {
@@ -303,6 +354,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .character-count {
@@ -314,15 +366,20 @@
 .form-input,
 .form-textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 11px 15px;
   font-family: var(--font-sans);
-  font-size: 0.925rem;
+  /* Minimum 16px to prevent iOS Safari auto-zoom on mobile which breaks viewport */
+  font-size: 16px;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   outline: none;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .form-input::placeholder,
@@ -355,6 +412,7 @@
   font-size: 0.75rem;
   color: var(--error-color);
   margin-top: 2px;
+  word-break: break-word;
 }
 
 .general-error-banner {
@@ -365,6 +423,8 @@
   background-color: rgba(239, 68, 68, 0.08);
   border: 1px solid var(--error-color);
   border-radius: var(--radius-xs);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .error-banner-content {
@@ -385,6 +445,7 @@
   display: flex;
   align-items: center;
   margin-top: 4px;
+  width: 100%;
 }
 
 .form-submit-btn {
@@ -396,6 +457,7 @@
   padding: 12px 24px;
   font-size: 0.875rem;
   font-weight: 600;
+  box-sizing: border-box;
 }
 
 .form-submit-btn svg {
@@ -429,6 +491,8 @@
   text-align: center;
   padding: 24px 16px;
   gap: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .success-icon-wrap {
@@ -464,4 +528,87 @@
   margin-top: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Mobile Responsiveness Enhancements (<= 640px, <= 480px, <= 380px)
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .contact-info-card {
+    padding: 20px 16px;
+    gap: 18px;
+  }
+
+  .contact-form-card {
+    padding: 20px 16px;
+  }
+
+  .form-card-header {
+    margin-bottom: 18px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-grid-row {
+    gap: 16px;
+  }
+
+  .social-pill-btn {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-status-pill {
+    padding: 5px 12px;
+    font-size: 0.725rem;
+    gap: 6px;
+  }
+
+  .contact-social-pills {
+    gap: 6px;
+  }
+
+  .social-pill-btn {
+    flex: 1 1 calc(33.333% - 6px);
+    padding: 8px 6px;
+    font-size: 0.725rem;
+  }
+
+  .success-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .email-copy-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .email-copy-content {
+    width: 100%;
+  }
+
+  .email-address {
+    font-size: 0.8rem;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  .copy-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 7px 12px;
+  }
+
+  .social-pill-btn {
+    flex: 1 1 100%;
+  }
 }

@@ -214,6 +214,13 @@
   text-align: center;
   gap: 14px;
   box-shadow: var(--shadow-subtle);
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .projects-empty-card {
+    padding: 28px 16px;
+  }
 }
 
 .coming-soon-badge {

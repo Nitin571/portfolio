@@ -173,7 +173,7 @@ export default function Contact() {
         <div className="section-header">
           <div className="contact-status-pill">
             <span className="pulse-dot" />
-            <span>Open to developer internships & projects</span>
+            <span className="status-pill-text">Open to developer internships & projects</span>
           </div>
           <h2 className="section-title">{contactData.heading}</h2>
           <p className="section-desc">{contactData.description}</p>

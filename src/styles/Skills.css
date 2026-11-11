@@ -17,6 +17,9 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   padding: 8px 24px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-row {
@@ -25,6 +28,8 @@
   gap: 10px;
   padding: 16px 0;
   border-bottom: 1px solid var(--border-subtle);
+  width: 100%;
+  min-width: 0;
 }
 
 .skill-row:last-child {
@@ -55,6 +60,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  min-width: 0;
+  width: 100%;
 }
 
 .skill-chip {
@@ -66,6 +73,8 @@
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xs);
   transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skill-chip:hover {
@@ -87,4 +96,24 @@
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1.2;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  .skills-stack-layout {
+    padding: 6px 16px;
+  }
+
+  .skill-chips-list {
+    gap: 8px;
+  }
+
+  .skill-chip {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+
+  .chip-name {
+    font-size: 0.825rem;
+  }
 }
